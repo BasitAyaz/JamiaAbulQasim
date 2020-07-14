@@ -9,7 +9,7 @@ import book3 from "../images/book3.jpg";
 import teacher from "../images/teacher.jpg";
 import teacher1 from "../images/teacher1.jpg";
 import teacher2 from "../images/teacher2.jpg";
-import logo from '../images/logo.png'
+import logo from "../images/logo.png";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -19,74 +19,54 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <header className="masthead mb-auto">
-          <div className="inner p-4">
-            <h3 className="masthead-brand">
-              <img width='150px' src={`${logo}`} />
-            </h3>
-          </div>
-        </header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">
-                    Action
+        <div className="container">
+          <div className='container'></div>
+          <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="#">
+              <img src={logo} width="80px" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+              aria-controls="navbarCollapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">
+                    Home <span class="sr-only">(current)</span>
                   </a>
-                  <a className="dropdown-item" href="#">
-                    Another action
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signup">
+                   Registration <span class="sr-only">(current)</span>
                   </a>
-                  <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">
-                    Something else here
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contactForm">
+                    Contact <span class="sr-only">(current)</span>
                   </a>
-                </div>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="#">
-                  Disabled
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contactForm">
+                    Courses <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                   Fee Submission
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>{" "}
+        </div>
         <div
           className="container-fluid"
           style={{
@@ -138,28 +118,7 @@ class Dashboard extends React.Component {
             </div>
           </div>
         </div>
-        <div className="jumbotron">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-3">
-                <p className="green">786</p>
-                <p className="text-muted">Students</p>
-              </div>
-              <div className="col-md-3">
-                <p className="green">786</p>
-                <p className="text-muted">Courses</p>
-              </div>
-              <div className="col-md-3">
-                <p className="green">786</p>
-                <p className="text-muted">Events</p>
-              </div>
-              <div className="col-md-3">
-                <p className="green">786</p>
-                <p className="text-muted">Teachers</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Popular Courses */}
         <div className="jumbotron bg-white">
           <div className="container">
             <div className="row">
@@ -167,12 +126,22 @@ class Dashboard extends React.Component {
                 <h1>Popular Courses</h1>
               </div>
               <div className="col-md-4 text-left p-3">
-                <div className="card  border border-grey">
+                {/* <div className="card  border border-grey">
                   <img width="100%" src={book} className="img-fluid" />
                   <div className="p-4">
                     <h2>Dars-e-Nizami</h2>
                     <p>2 Year Complete certified course</p>
                     <button className="btns">Register</button>
+                  </div>
+                </div> */}
+                <div className='card border-dark'>
+                  <div className='courseCard'>
+                  <div className='heading'>
+                  <p>Dars-e-Nizami</p>
+                  </div>
+                  <div className='text-center p-5'>
+                <p>2 Year Complete certified course</p>
+                  </div>
                   </div>
                 </div>
               </div>

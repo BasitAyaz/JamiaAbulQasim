@@ -81,3 +81,13 @@ ul li{
 .nav-link:hover{
   color: blue;
 }
+.logo{
+  position: relative;
+  left: 2%;
+  top: 3%;
+}
+.heading{
+  background-color: green;
+  padding: 10px;
+  color: white;
+}
