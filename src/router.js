@@ -4,6 +4,7 @@ import Signup from "./components/signup";
 import Dashboard from './components/dashboard'
 import Contact from './components/contact'
 import Admin from './components/admin'
+import Course from './components/cources'
 
 export default function AapRoute() {
   return (
@@ -12,6 +13,9 @@ export default function AapRoute() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/course">
+            <Course />
+          </Route>
           <Route path="/admin">
             <Admin />
           </Route>

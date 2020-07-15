@@ -20,7 +20,6 @@ class Dashboard extends React.Component {
     return (
       <div>
         <div className="container">
-          <div className='container'></div>
           <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="#">
               <img src={logo} width="80px" />
@@ -45,7 +44,7 @@ class Dashboard extends React.Component {
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="signup">
-                   Registration <span class="sr-only">(current)</span>
+                    Registration <span class="sr-only">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -54,13 +53,13 @@ class Dashboard extends React.Component {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/contactForm">
+                  <a class="nav-link" href="/course">
                     Courses <span class="sr-only">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                   Fee Submission
+                    Fee Submission
                   </a>
                 </li>
               </ul>
@@ -126,42 +125,30 @@ class Dashboard extends React.Component {
                 <h1>Popular Courses</h1>
               </div>
               <div className="col-md-4 text-left p-3">
-                {/* <div className="card  border border-grey">
-                  <img width="100%" src={book} className="img-fluid" />
-                  <div className="p-4">
-                    <h2>Dars-e-Nizami</h2>
-                    <p>2 Year Complete certified course</p>
-                    <button className="btns">Register</button>
-                  </div>
-                </div> */}
-                <div className='card border-dark'>
-                  <div className='courseCard'>
-                  <div className='heading'>
-                  <p>Dars-e-Nizami</p>
-                  </div>
-                  <div className='text-center p-5'>
-                <p>2 Year Complete certified course</p>
-                  </div>
+                <div className="courseCard">
+                  <div className="card p-5 shadow rounded text-white text-center">
+                    <p className="medium">Darse nizami Course</p>
                   </div>
                 </div>
               </div>
               <div className="col-md-4 text-left p-3">
-                <div className="card  border border-grey animated fadeIn">
-                  <img width="100%" src={book1} className="img-fluid" />
-                  <div className="p-4">
-                    <h2>Huqooq-e-Zojain</h2>
-                    <p>2 Year Complete certified course</p>
-                    <button className="btns">Register</button>
+                <div className="courseCard">
+                  <div className="card p-5 shadow rounded text-white text-center">
+                    <p className="medium">Huqooq-e-Zojain course</p>
                   </div>
                 </div>
               </div>
               <div className="col-md-4 text-left p-3">
-                <div className="card  border border-grey">
-                  <img width="100%" src={book3} className="img-fluid" />
-                  <div className="p-4">
-                    <h2>Huqooq-e-Zojain</h2>
-                    <p>2 Year Complete certified course</p>
-                    <button className="btns">Register</button>
+                <div className="courseCard">
+                  <div onClick={()=>this.props.history.push('/course')} className="card p-5 shadow rounded text-white text-center">
+                    <p className="medium">Farz Uloom Course</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 text-left p-3">
+                <div className="courseCard">
+                  <div className="card p-5 shadow rounded text-white text-center">
+                    <p className="medium">Darse nizami Course</p>
                   </div>
                 </div>
               </div>
@@ -306,11 +293,12 @@ class Dashboard extends React.Component {
             </div>
           </div>
         </div>
+        {/* footer */}
         <div className="jumbotron bg-light">
           <div className="container">
             <div className="row">
               <div className="col-md-3 text-left">
-                <h3>Jamia Abul Qasim</h3>
+                <img width="80px" src={logo} />
                 <p>Horizone Academy near Bahadurabad Chowrangi</p>
                 <br />
                 <p className="b">

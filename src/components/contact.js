@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../images/logo.png";
+
 
 class Contact extends React.Component {
   constructor(props) {
@@ -11,22 +13,52 @@ class Contact extends React.Component {
     return (
       <div>
         <header class="masthead mb-auto">
-          <div class="inner p-4">
-            <h3 class="masthead-brand">Jamia Abul Qasim</h3>
-            <nav class="nav nav-masthead justify-content-center">
-              <a class="nav-link active" href="#">
-                Home
+          <div className="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+              <a class="navbar-brand" href="#">
+                <img src={logo} width="80px" />
               </a>
-              <a class="nav-link" href="#">
-                About Us
-              </a>
-              <a class="nav-link" href="#">
-                Contact
-              </a>
-              <a class="nav-link" href="#">
-                Courses
-              </a>
-            </nav>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">
+                      Home <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="signup">
+                      Registration <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contactForm">
+                      Contact <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/course">
+                      Courses <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      Fee Submission
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>{" "}
           </div>
         </header>
         <div className="jumbotron">
@@ -99,11 +131,12 @@ class Contact extends React.Component {
             </div>
           </div>
         </div>
+        {/* footer */}
         <div className="jumbotron bg-light">
           <div className="container">
             <div className="row">
               <div className="col-md-3 text-left">
-                <h3>Jamia Abul Qasim</h3>
+              <img width='80px' src={logo} />
                 <p>Horizone Academy near Bahadurabad Chowrangi</p>
                 <br />
                 <p className="b">
@@ -159,7 +192,7 @@ class Contact extends React.Component {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="col-md-3  text-left">
                 <h4>Join over Newsletter</h4>
                 <p>enter your email address for subscribe</p>

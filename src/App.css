@@ -91,3 +91,14 @@ ul li{
   padding: 10px;
   color: white;
 }
+.medium{
+  font-size: 2em;
+}
+.courseCard div{
+  transition: .5s;
+  background: linear-gradient(to bottom left, #66ccff 0%, #009999 100%);
+  cursor: pointer;
+}
+.courseCard:hover div{
+  background: linear-gradient(to top right, #66ccff 0%, #009999 100%);
+}
