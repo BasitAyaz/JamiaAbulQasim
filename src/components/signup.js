@@ -6,7 +6,54 @@ import logo from "../images/logo.png";
 class Signup extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      firstname: "",
+      lastname: "",
+      FatherName: "",
+      contact: "",
+      cnic: "",
+      country: "",
+      city: "",
+      email: "",
+      password1: "",
+      password2: "",
+      course: "",
+      gender: "",
+    };
+  }
+  signUp(e) {
+    e.preventDefault();
+    let {
+      firstname,
+      lastname,
+      FatherName,
+      contact,
+      cnic,
+      country,
+      city,
+      email,
+      password1,
+      password2,
+      course,
+      gender,
+    } = this.state;
+    if (password1 === password2) {
+      let obj = {
+        firstname,
+        lastname,
+        FatherName,
+        contact,
+        cnic,
+        country,
+        city,
+        email,
+        password1,
+        password2,
+        course,
+        gender,
+      }
+      console.log(obj)
+    }
   }
   render() {
     return (
@@ -59,14 +106,21 @@ class Signup extends React.Component {
           </nav>{" "}
         </div>
         <div className="container-fluid pb-5">
-          <div className="row d-flex justify-content-center pt-3 pb-5">
-            <img width="100px" src={logo} />
+          <div
+            style={{
+              background:
+                "linear-gradient(to bottom left, #66ccff 0%, #009999 100%)",
+            }}
+            className="row d-flex justify-content-center mb-5 pt-2 pb-5"
+          >
+            <img style={{ margin: "20px" }} width="100px" src={logo} />
           </div>
         </div>
-        <div style={{ marginTop: "-6%" }} className="container">
+        <div style={{ marginTop: "-150px" }} className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-md-8 m-2">
               <form
+                onSubmit={(e) => this.signUp(e)}
                 style={{
                   boxShadow: "0px 8px 8px grey",
                   borderRadius: "8px",
@@ -82,6 +136,7 @@ class Signup extends React.Component {
                       id="FirstName"
                       className="form-control"
                       placeholder="Enter Your First Name"
+                      onChange={(e)=>this.setState({firstname:e.target.value})}
                     />
                   </div>
                   <div className="col-md-6 mb-3">
@@ -90,6 +145,7 @@ class Signup extends React.Component {
                       id="LastName"
                       className="form-control"
                       placeholder="Enter Your Last Name"
+                      onChange={(e)=>this.setState({lastname:e.target.value})}
                     />
                   </div>
                   <div className="col-md-8 mb-3">
@@ -98,6 +154,7 @@ class Signup extends React.Component {
                       id="FatherName"
                       className="form-control"
                       placeholder="Enter Your Father Name"
+                      onChange={(e)=>this.setState({FatherName:e.target.value})}
                     />
                   </div>
                   <div className="col-md-6 mb-3">
@@ -106,6 +163,7 @@ class Signup extends React.Component {
                       id="contact"
                       className="form-control"
                       placeholder="03XXXXXXXXX"
+                      onChange={(e)=>this.setState({contact:e.target.value})}
                     />
                   </div>
                   <div className="col-md-6 mb-3">
@@ -114,19 +172,24 @@ class Signup extends React.Component {
                       id="cnic"
                       className="form-control"
                       placeholder="XXXXX-XXXXXXX-X"
+                      onChange={(e)=>this.setState({cnic:e.target.value})}
                     />
                   </div>
                 </div>
                 <hr className="mb-4" />
                 <div className="row">
                   <div className="col-md-6 mb-3">
-                    <select className="form-control">
+                    <select className="form-control" 
+                     onChange={(e)=>this.setState({country:e.target.value})}
+                    >
                       <option>Select Country</option>
                       <option>Pakistan</option>
                     </select>
                   </div>
                   <div className="col-md-6 mb-3">
-                    <select className="form-control">
+                    <select className="form-control"
+                     onChange={(e)=>this.setState({city:e.target.value})}
+                    >
                       <option>Select City</option>
                       <option>Karachi</option>
                       <option>Lahore</option>
@@ -143,6 +206,7 @@ class Signup extends React.Component {
                       id="email"
                       placeholder="example@gmail.com"
                       className="form-control"
+                      onChange={(e)=>this.setState({email:e.target.value})}
                     />
                   </div>
                   <div className="col-md-5 mb-3">
@@ -152,6 +216,7 @@ class Signup extends React.Component {
                       className="form-control"
                       id="password1"
                       placeholder="Password"
+                      onChange={(e)=>this.setState({password1:e.target.value})}
                     />
                   </div>
                   <div className="col-md-5 mb-3">
@@ -161,6 +226,7 @@ class Signup extends React.Component {
                       className="form-control"
                       id="password2"
                       placeholder="Password"
+                      onChange={(e)=>this.setState({password2:e.target.value})}
                     />
                   </div>
                   <div className="col-md-12 mb-3"></div>
@@ -168,7 +234,9 @@ class Signup extends React.Component {
                 <hr className="mb-4" />
                 <div className="row">
                   <div className="col-md-6 mb-3">
-                    <select className="form-control">
+                    <select className="form-control"
+                     onChange={(e)=>this.setState({course:e.target.value})}
+                    >
                       <option>Select Course</option>
                       <option>Darse Nizami</option>
                       <option>Huqooq-e-Zojain Course</option>
