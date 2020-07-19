@@ -33,43 +33,43 @@ label{
   transition: .5s;
 }
 .btnC:hover{
-  background-color: green;
+  background-color: #009999;
   color: white;
-  border-color: green;
+  border-color: #009999;
 }
 .btng{
   background-color: transparent;
   border: 1px solid;
-  color: green;
+  color: #009999;
   padding: 10px 15px;
   border-radius: 30px;
   transition: .5s;
 }
 .btng:hover{
-  background-color: green;
+  background-color: #009999;
   color: white;
-  border-color: green;
+  border-color: #009999;
 }
 .green{
-  color: green;
+  color: #009999;
   font-weight: bold;
   font-size: 3em;
 }
 .btns{
   padding: 7px 10px;
   font-size: 1em;
-  background-color: green;
+  background-color: #009999;
   color: white;
   border: none;
   transition: .5s;
 }
 .btns:hover{
   background-color: transparent;
-  color: green;
+  color: #009999;
   border: 1px solid;
 }
 a.m-1:hover{
-  color: green;
+  color: #009999;
 }
 .b{
   font-weight: bold;
@@ -87,7 +87,7 @@ ul li{
   top: 3%;
 }
 .heading{
-  background-color: green;
+  background-color: #009999;
   padding: 10px;
   color: white;
 }
@@ -101,4 +101,26 @@ ul li{
 }
 .courseCard:hover div{
   background: linear-gradient(to top right, #66ccff 0%, #009999 100%);
+}
+.nav-item{
+  transition: .5s !important;
+}
+.nav-item:hover{
+  border-bottom: 1px solid #009999;
+}
+.nav-item a:hover{
+  color: #009999 !important;
+}
+.shadow{ 
+  box-shadow: 0 0 12px lightgrey;
+  padding: 10px;
+  border: none;
+}
+.color{
+  color: #009999 !important;
+  font-weight: bold;
+}
+
+.imgContainer{
+  padding: 30px;
 }

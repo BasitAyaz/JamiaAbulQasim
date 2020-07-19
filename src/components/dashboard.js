@@ -11,17 +11,21 @@ import teacher1 from "../images/teacher1.jpg";
 import teacher2 from "../images/teacher2.jpg";
 import logo from "../images/logo.png";
 
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+  goToPage(e) {
+    console.log(this.props);
   }
   render() {
     return (
       <div>
         <div className="container">
           <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
               <img src={logo} width="80px" />
             </a>
             <button
@@ -37,7 +41,7 @@ class Dashboard extends React.Component {
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                <li style={{ borderBottom: '1px solid #009999'}} class="nav-item">
                   <a class="nav-link" href="/">
                     Home <span class="sr-only">(current)</span>
                   </a>
@@ -58,7 +62,7 @@ class Dashboard extends React.Component {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/feesubmission">
                     Fee Submission
                   </a>
                 </li>
@@ -67,7 +71,7 @@ class Dashboard extends React.Component {
           </nav>{" "}
         </div>
         <div
-          className="container-fluid"
+          className="bg-image"
           style={{
             backgroundImage: `url(${caros})`,
             backgroundRepeat: "no-repeat",
@@ -78,10 +82,7 @@ class Dashboard extends React.Component {
             height: "70vh",
           }}
         >
-          <div
-            className="container-fluid"
-            style={{ backgroundColor: "rgba(0,0,0,.5)", height: "100%" }}
-          >
+          <div style={{ backgroundColor: "rgba(0,0,0,.5)", height: "100%" }}>
             <div className="container">
               <div className="row" style={{ padding: "12% 0px" }}>
                 <div className="d-flex flex-column align-items-start">
@@ -100,7 +101,7 @@ class Dashboard extends React.Component {
         <div className="jumbotron bg-white">
           <div className="container">
             <div className="row">
-              <div className="col-md-12 text-left  mb-4">
+              <div className="col-md-12 text-left  animated fadeInDown mb-4">
                 <h1>About Us</h1>
               </div>
               <div className="col-md-6 text-left p-2">
@@ -125,7 +126,10 @@ class Dashboard extends React.Component {
                 <h1>Popular Courses</h1>
               </div>
               <div className="col-md-4 text-left p-3">
-                <div className="courseCard">
+                <div
+                  onClick={(e) => this.goToPage("signup")}
+                  className="courseCard"
+                >
                   <div className="card p-5 shadow rounded text-white text-center">
                     <p className="medium">Darse nizami Course</p>
                   </div>
@@ -134,13 +138,16 @@ class Dashboard extends React.Component {
               <div className="col-md-4 text-left p-3">
                 <div className="courseCard">
                   <div className="card p-5 shadow rounded text-white text-center">
-                    <p className="medium">Huqooq-e-Zojain course</p>
+                    <p className="medium">Aqaid-o-Ibadat Course</p>
                   </div>
                 </div>
               </div>
               <div className="col-md-4 text-left p-3">
                 <div className="courseCard">
-                  <div onClick={()=>this.props.history.push('/course')} className="card p-5 shadow rounded text-white text-center">
+                  <div
+                    onClick={() => this.props.history.push("/course")}
+                    className="card p-5 shadow rounded text-white text-center"
+                  >
                     <p className="medium">Farz Uloom Course</p>
                   </div>
                 </div>
@@ -148,7 +155,7 @@ class Dashboard extends React.Component {
               <div className="col-md-4 text-left p-3">
                 <div className="courseCard">
                   <div className="card p-5 shadow rounded text-white text-center">
-                    <p className="medium">Darse nizami Course</p>
+                    <p className="medium">Hifz-e-Quran Course</p>
                   </div>
                 </div>
               </div>

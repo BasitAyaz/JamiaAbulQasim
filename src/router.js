@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard'
 import Contact from './components/contact'
 import Admin from './components/admin'
 import Course from './components/cources'
+import Fees from './components/feesSubmission'
 
 export default function AapRoute() {
   return (
@@ -15,6 +16,9 @@ export default function AapRoute() {
         <Switch>
           <Route path="/course">
             <Course />
+          </Route>
+          <Route path="/feesubmission">
+            <Fees />
           </Route>
           <Route path="/admin">
             <Admin />

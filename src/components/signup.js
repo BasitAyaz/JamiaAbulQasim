@@ -60,7 +60,7 @@ class Signup extends React.Component {
       <div style={{ backgroundColor: "#f5f5f5" }}>
         <div className="container">
           <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
               <img src={logo} width="80px" />
             </a>
             <button
@@ -81,7 +81,7 @@ class Signup extends React.Component {
                     Home <span class="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li style={{ borderBottom: '1px solid #009999'}} class="nav-item">
                   <a class="nav-link" href="signup">
                     Registration <span class="sr-only">(current)</span>
                   </a>
@@ -97,7 +97,7 @@ class Signup extends React.Component {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/feesubmission">
                     Fee Submission
                   </a>
                 </li>

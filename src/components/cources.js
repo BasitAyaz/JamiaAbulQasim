@@ -14,7 +14,7 @@ class Course extends React.Component {
       <div>
         <div className="container">
           <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
               <img src={logo} width="80px" />
             </a>
             <button
@@ -45,13 +45,13 @@ class Course extends React.Component {
                     Contact <span class="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li style={{ borderBottom: '1px solid #009999'}} class="nav-item">
                   <a class="nav-link" href="/course">
                     Courses <span class="sr-only">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/feesubmission">
                     Fee Submission
                   </a>
                 </li>
@@ -100,7 +100,7 @@ class Course extends React.Component {
                 <div className="card  border border-grey shadow rounded">
                   <img width="100%" src={muslim} className="img-fluid" />
                   <div className="p-4">
-                    <h2>Farz Uloom</h2>
+                    <h2>Aqaid-o-Ibadat</h2>
                     <p>2 Year Complete certified course</p>
                     <button className="btns">Register</button>
                   </div>
