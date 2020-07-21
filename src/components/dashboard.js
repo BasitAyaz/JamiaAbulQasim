@@ -10,7 +10,7 @@ import teacher from "../images/teacher.jpg";
 import teacher1 from "../images/teacher1.jpg";
 import teacher2 from "../images/teacher2.jpg";
 import logo from "../images/logo.png";
-
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -41,7 +41,10 @@ class Dashboard extends React.Component {
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li style={{ borderBottom: '1px solid #009999'}} class="nav-item">
+                <li
+                  style={{ borderBottom: "1px solid #009999" }}
+                  class="nav-item"
+                >
                   <a class="nav-link" href="/">
                     Home <span class="sr-only">(current)</span>
                   </a>
@@ -67,9 +70,15 @@ class Dashboard extends React.Component {
                   </a>
                 </li>
               </ul>
+              <div>
+                <button className="donatebtn">
+                  <i class="fas fa-donate"></i> Donate Us
+                </button>
+              </div>
             </div>
           </nav>{" "}
         </div>
+        {/* caros */}
         <div
           className="bg-image"
           style={{
@@ -83,9 +92,10 @@ class Dashboard extends React.Component {
           }}
         >
           <div style={{ backgroundColor: "rgba(0,0,0,.5)", height: "100%" }}>
-            <div className="container">
-              <div className="row" style={{ padding: "12% 0px" }}>
+            <div className="container p-5">
+              <div className="row" style={{ padding: "8% 0px" }}>
                 <div className="d-flex flex-column align-items-start">
+                <ScrollAnimation animateIn="fadeInUp">
                   <h1 className="fontLarge">
                     Start Learning Dars-E-Nizami Online
                   </h1>
@@ -93,217 +103,243 @@ class Dashboard extends React.Component {
                     We are the team of best Islamic Scholars
                   </h3>
                   <button className="btnC">Registration</button>
+                  </ScrollAnimation>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="jumbotron bg-white">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 text-left  animated fadeInDown mb-4">
-                <h1>About Us</h1>
-              </div>
-              <div className="col-md-6 text-left p-2">
-                <p>
-                  We are an institute where we teach best quality of education
-                  of Islamic courses for male and female.
-                </p>
-                <p>we are teaching over courses online also</p>
-                <button className="btng">Registration</button>
-              </div>
-              <div className="col-md-6 text-left p-2">
-                <img src={side} width="100%" />
-              </div>
+        {/* about us  */}
+        <div className="container p-5">
+          <div className="row">
+            <div className="col-md-12 text-left p-3">
+              <ScrollAnimation  animateIn="fadeInDown">
+              <h1>About Us</h1>
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-6 text-left p-3">
+            <ScrollAnimation  animateIn="fadeInLeft">
+              <p>
+                Jamia and Madrasa Abul Qasim is working under the supervision of
+                Mufti Muhammad Madani Raza, an islamic scholar from Pakistan.
+                This Jamia and Madrasa is currently an Online Institute where
+                our Scholars' team teaches different courses all over the world
+                at your feasible time. Basically the aim of our institute is to
+                provide authentic Islamic Knowledge with a best standard and
+                provide vast scope to students so that they can work with
+                relaxation.
+              </p>
+              <button className="btng">Read More</button>
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-6 text-left p-3">
+            <ScrollAnimation  animateIn="fadeInRight">
+              <img src={side} width="100%" />
+              </ScrollAnimation>
             </div>
           </div>
         </div>
         {/* Popular Courses */}
-        <div className="jumbotron bg-white">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 text-left  mb-4">
-                <h1>Popular Courses</h1>
+        <div className="container p-5">
+          <div className="row">
+            <div className="col-md-12 text-left  mb-4">
+            <ScrollAnimation  animateIn="fadeInDown">
+              <h1>Popular Courses</h1>
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-4 text-left p-3">
+            <ScrollAnimation  animateIn="fadeInUp">
+              <div
+                onClick={(e) => this.goToPage("signup")}
+                className="courseCard"
+              >
+                <div className="card p-5 shadow rounded text-white text-center">
+                  <p className="medium">Darse nizami Course</p>
+                </div>
               </div>
-              <div className="col-md-4 text-left p-3">
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-4 text-left p-3">
+            <ScrollAnimation  animateIn="fadeInUp">
+              <div className="courseCard">
+                <div className="card p-5 shadow rounded text-white text-center">
+                  <p className="medium">Aqaid-o-Ibadat Course</p>
+                </div>
+              </div>
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-4 text-left p-3">
+            <ScrollAnimation  animateIn="fadeInUp">
+              <div className="courseCard">
                 <div
-                  onClick={(e) => this.goToPage("signup")}
-                  className="courseCard"
+                  onClick={() => this.props.history.push("/course")}
+                  className="card p-5 shadow rounded text-white text-center"
                 >
-                  <div className="card p-5 shadow rounded text-white text-center">
-                    <p className="medium">Darse nizami Course</p>
-                  </div>
+                  <p className="medium">Farz Uloom Course</p>
                 </div>
               </div>
-              <div className="col-md-4 text-left p-3">
-                <div className="courseCard">
-                  <div className="card p-5 shadow rounded text-white text-center">
-                    <p className="medium">Aqaid-o-Ibadat Course</p>
-                  </div>
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-4 text-left p-3">
+            <ScrollAnimation  animateIn="fadeInUp">
+              <div className="courseCard">
+                <div className="card p-5 shadow rounded text-white text-center">
+                  <p className="medium">Hifz-e-Quran Course</p>
                 </div>
               </div>
-              <div className="col-md-4 text-left p-3">
-                <div className="courseCard">
-                  <div
-                    onClick={() => this.props.history.push("/course")}
-                    className="card p-5 shadow rounded text-white text-center"
-                  >
-                    <p className="medium">Farz Uloom Course</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 text-left p-3">
-                <div className="courseCard">
-                  <div className="card p-5 shadow rounded text-white text-center">
-                    <p className="medium">Hifz-e-Quran Course</p>
-                  </div>
-                </div>
-              </div>
+              </ScrollAnimation>
             </div>
           </div>
         </div>
-        <div className="jumbotron bg-white">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 text-left mb-4">
-                <h1>Over Best Teachers</h1>
-              </div>
-              <div className="col-md-4 p-2">
-                <div className="card border border-grey">
-                  <img src={teacher} width="100%" className="img-fluid" />
-                  <div className="p-4">
-                    <h3 className="m-3">Madani Raza</h3>
-                    <p className="text-muted font-italic">
-                      certified Dars-e- Nizami and Muftee course from _______
-                      institute
-                    </p>
-                    <hr />
-                    <div class="social">
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-whatsapp"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </div>
+        {/* Teacher */}
+        <div className="container p-5">
+          <div className="row p-3">
+            <div className="col-md-12 text-left mb-4">
+            <ScrollAnimation animateIn="fadeInUp">
+              <h1>Over Best Teachers</h1>
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-4 p-2">
+            <ScrollAnimation animateIn="fadeInDown">
+              <div className="card border border-grey">
+                <img src={teacher} width="100%" className="img-fluid" />
+                <div className="p-4">
+                  <h3 className="m-3">Madani Raza</h3>
+                  <p className="text-muted font-italic">
+                    certified Dars-e- Nizami and Muftee course from _______
+                    institute
+                  </p>
+                  <hr />
+                  <div class="social">
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 p-2">
-                <div className="card border border-grey">
-                  <img src={teacher1} width="100%" className="img-fluid" />
-                  <div className="p-4">
-                    <h3 className="m-3">Shaban Raza</h3>
-                    <p className="text-muted font-italic">
-                      certified Dars-e- Nizami and Muftee course from _______
-                      institute
-                    </p>
-                    <hr />
-                    <div class="social">
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-whatsapp"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </div>
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-4 p-2">
+            <ScrollAnimation animateIn="fadeInDown">
+              <div className="card border border-grey">
+                <img src={teacher1} width="100%" className="img-fluid" />
+                <div className="p-4">
+                  <h3 className="m-3">Shaban Raza</h3>
+                  <p className="text-muted font-italic">
+                    certified Dars-e- Nizami and Muftee course from _______
+                    institute
+                  </p>
+                  <hr />
+                  <div class="social">
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 p-2">
-                <div className="card border border-grey">
-                  <img src={teacher2} width="100%" className="img-fluid" />
-                  <div className="p-4">
-                    <h3 className="m-3">Nadeem Attari</h3>
-                    <p className="text-muted font-italic">
-                      certified Dars-e- Nizami and Muftee course from _______
-                      institute
-                    </p>
-                    <hr />
-                    <div class="social">
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-whatsapp"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                      <a
-                        href=""
-                        style={{ color: "grey", fontSize: "1.2em" }}
-                        className="m-2"
-                      >
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </div>
+              </ScrollAnimation>
+            </div>
+            <div className="col-md-4 p-2">
+            <ScrollAnimation animateIn="fadeInDownBig">
+              <div className="card border border-grey">
+                <img src={teacher2} width="100%" className="img-fluid" />
+                <div className="p-4">
+                  <h3 className="m-3">Nadeem Attari</h3>
+                  <p className="text-muted font-italic">
+                    certified Dars-e- Nizami and Muftee course from _______
+                    institute
+                  </p>
+                  <hr />
+                  <div class="social">
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href=""
+                      style={{ color: "grey", fontSize: "1.2em" }}
+                      className="m-2"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
                   </div>
                 </div>
               </div>
+              </ScrollAnimation>
             </div>
           </div>
         </div>
         {/* footer */}
         <div className="jumbotron bg-light">
-          <div className="container">
-            <div className="row">
+          <div className="container p-5">
+            <div className="row p-3">
               <div className="col-md-3 text-left">
                 <img width="80px" src={logo} />
                 <p>Horizone Academy near Bahadurabad Chowrangi</p>

@@ -102,6 +102,7 @@ class Signup extends React.Component {
                   </a>
                 </li>
               </ul>
+              <div><button className='donatebtn'><i class="fas fa-donate"></i> Donate Us</button></div>
             </div>
           </nav>{" "}
         </div>

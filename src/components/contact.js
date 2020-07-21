@@ -57,16 +57,17 @@ class Contact extends React.Component {
                     </a>
                   </li>
                 </ul>
+                <div><button className='donatebtn'><i class="fas fa-donate"></i> Donate Us</button></div>
               </div>
             </nav>{" "}
           </div>
         </header>
         <div className="jumbotron">
-          <div className="container">
+          <div className="container p-5">
             <div className="row">
               <div className="col-md-12 text-left">
                 <h1>Contact Us</h1>
-                <p>sdtfa sgfjgsdhjfg sdjgf jhds gfjdsg fjds g</p>
+                <p>If you want to connect and you want to give any suggession feel free to contact us</p>
               </div>
             </div>
           </div>
@@ -85,8 +86,8 @@ class Contact extends React.Component {
             ></iframe>
           </div>
         </div>
-        <div className="jumbotron bg-white">
-          <div className="container">
+          {/* contact form */}
+          <div className="container p-5">
             <div className="row">
               <div className="col-md-4 p-3">
                 <input className="form-control" placeholder="Enter Your Name" />
@@ -110,9 +111,9 @@ class Contact extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+          {/* contact details */}
         <div className="jumbotron" style={{ backgroundColor: "green" }}>
-          <div className="container">
+          <div className="container p-5">
             <div className="row">
               <div className="col-md-4 text-white">
                 <h2>Location</h2>
@@ -133,7 +134,7 @@ class Contact extends React.Component {
         </div>
         {/* footer */}
         <div className="jumbotron bg-light">
-          <div className="container">
+          <div className="container p-5">
             <div className="row">
               <div className="col-md-3 text-left">
               <img width='80px' src={logo} />

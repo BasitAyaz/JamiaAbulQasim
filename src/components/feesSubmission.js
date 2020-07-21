@@ -20,8 +20,20 @@ class Fees extends React.Component {
     this.state = {
       displayText:true,
       feeSlip: false,
-      idCard:false
+      idCard:false,
+      feeControl:'',
+      resultText:false,
     };
+  }
+  show(e){
+    const {feeControl,feeSlip}= this.state
+    if(e == 'Fee Slip'){
+      this.setState({feeSlip:true,idCard:false,displayText:false,resultText:false})
+    }else if(e == 'ID Card'){
+      this.setState({feeSlip:false,idCard:true,displayText:false,resultText:false})
+    }else if(e == 'Result'){
+      this.setState({feeSlip:false,idCard:false,displayText:false,resultText:true})
+    }
   }
   goToPage(e) {
     console.log(this.props);
@@ -76,6 +88,7 @@ class Fees extends React.Component {
                   </a>
                 </li>
               </ul>
+              <div><button className='donatebtn'><i class="fas fa-donate"></i> Donate Us</button></div>
             </div>
           </nav>
         </div>
@@ -86,6 +99,7 @@ class Fees extends React.Component {
               <select
                 style={{ width: "90%", outline: "none" }}
                 className="shadow"
+                onChange={(e)=>this.show(e.target.value)}
               >
                 <option>Select by CNIC</option>
                 <option>Fee Slip</option>
@@ -448,6 +462,10 @@ class Fees extends React.Component {
               </div>
           </div>
       </div>:false}
+      {/* result */}
+      {this.state.resultText?<div className='container mt-5'>
+          <p style={{color:'#1f9999',fontSize:'3em'}}>Result is not updated</p>
+        </div>:false}
       </div>
     );
   }

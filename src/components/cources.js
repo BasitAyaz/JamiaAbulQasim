@@ -56,12 +56,12 @@ class Course extends React.Component {
                   </a>
                 </li>
               </ul>
+              <div><button className='donatebtn'><i class="fas fa-donate"></i> Donate Us</button></div>
             </div>
           </nav>
         </div>
         {/* courses Body */}
-        <div className="jumbotron bg-white">
-          <div className="container">
+          <div className="container p-5">
             <div className="row">
               <div className="col-md-12 text-left  mb-4">
                 <h1>Popular Courses</h1>
@@ -80,7 +80,7 @@ class Course extends React.Component {
                 <div className="card border border-grey shadow rounded">
                   <img width="100%" src={muslim} className="img-fluid" />
                   <div className="p-4">
-                    <h2>Huqooq-e-Zojain</h2>
+                    <h2>Hifz-e-Quran</h2>
                     <p>2 Year Complete certified course</p>
                     <button className="btns">Register</button>
                   </div>
@@ -108,11 +108,10 @@ class Course extends React.Component {
               </div>
             </div>
           </div>
-        </div>
         {/* footer */}
         <div className="jumbotron bg-light">
-          <div className="container">
-            <div className="row">
+          <div className="container p-5">
+            <div className="row p-3">
               <div className="col-md-3 text-left">
                 <img width='80px' src={logo} />
                 <p>Horizone Academy near Bahadurabad Chowrangi</p>

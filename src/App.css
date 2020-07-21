@@ -120,7 +120,17 @@ ul li{
   color: #009999 !important;
   font-weight: bold;
 }
-
-.imgContainer{
-  padding: 30px;
+.donatebtn{
+  border: none;
+  color: white;
+  background-color: #009999;
+  padding: 10px;
+  transition: .5s;
+  border-radius: 5px;
+  box-shadow: 0 8px 10px lightgrey;
+  outline: none;
+}
+.donatebtn:hover{
+  background-color: white;
+  color: #009999;
 }
