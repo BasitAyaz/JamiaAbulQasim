@@ -10,6 +10,7 @@ import teacher from "../images/teacher.jpg";
 import teacher1 from "../images/teacher1.jpg";
 import teacher2 from "../images/teacher2.jpg";
 import logo from "../images/logo.png";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class Donate extends React.Component {
   constructor(props) {
@@ -41,7 +42,6 @@ class Donate extends React.Component {
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li
-                  style={{ borderBottom: "1px solid #009999" }}
                   class="nav-item"
                 >
                   <a class="nav-link" href="/">
@@ -63,6 +63,11 @@ class Donate extends React.Component {
                     Courses <span class="sr-only">(current)</span>
                   </a>
                 </li>
+                <li   style={{ borderBottom: "1px solid #009999" }} class="nav-item">
+                      <a class="nav-link" href="/donate">
+                        About <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/feesubmission">
                     Fee Submission
@@ -78,19 +83,22 @@ class Donate extends React.Component {
           </nav>{" "}
         </div>
         <div className="jumbotron" style={{ background:'linear-gradient(to bottom left, #66ccff 0%, #009999 100%)'}}>
-          <div className="container p-5 text-center">
+          <div className="container p-5 text-left text-white">
+          <ScrollAnimation animateIn="fadeInLeft">
             <h1>About Us</h1>
+            </ScrollAnimation>
           </div>
         </div>
         <div className="container">
           <div className="row">
             <div className="col-md-12 p-5">
               <h1> 
-                <img src={logo} width="150px" />
+                <img src={logo} width="100px" />
                 Jamia Abul Qasim
               </h1>
             </div>
             <div className='text-left p-5'>
+            <ScrollAnimation animateIn="fadeInLeft">
               <h3  style={{color:'#009999'}}>Who Are We and What Do We Do?</h3>
               <p style={{color:'grey'}}>
                 Jamia and Madrasa Abul Qasim is working under the supervision of
@@ -150,7 +158,110 @@ class Donate extends React.Component {
                 seeking Allah's mercy. Your donation will be the saving for your
                 Akhirah.
               </p>
+              <div>
+                <button></button>
+              </div>
+              </ScrollAnimation>
             </div>
+          </div>
+        </div>
+        {/* footer  */}
+        <div className="jumbotron bg-light">
+          <div className="container p-5">
+            <ScrollAnimation animateIn="fadeInUp">
+              <div className="row p-3">
+                <div className="col-md-3 text-left">
+                  <img width="80px" src={logo} />
+                  <p>Horizone Academy near Bahadurabad Chowrangi</p>
+                  <br />
+                  <p className="b">
+                    Phone:{" "}
+                    <a style={{ color: "green" }} href="tel:123-456-7890">
+                      123-456-7890
+                    </a>
+                  </p>
+                  <p className="b">
+                    Mobile:{" "}
+                    <a style={{ color: "green" }} href="tel:03072199560">
+                      03072199560
+                    </a>
+                  </p>
+                </div>
+                <div className="col-md-3  text-left">
+                  <h4>Over Links</h4>
+                  <ul>
+                    <li>
+                      <i
+                        style={{ color: "green" }}
+                        class="fas fa-chevron-right"
+                      ></i>{" "}
+                      Home
+                    </li>
+                    <li>
+                      <i
+                        style={{ color: "green" }}
+                        class="fas fa-chevron-right"
+                      ></i>{" "}
+                      About
+                    </li>
+                    <li>
+                      <i
+                        style={{ color: "green" }}
+                        class="fas fa-chevron-right"
+                      ></i>{" "}
+                      Courses
+                    </li>
+                    <li>
+                      <i
+                        style={{ color: "green" }}
+                        class="fas fa-chevron-right"
+                      ></i>{" "}
+                      Contact
+                    </li>
+                    <li>
+                      <i
+                        style={{ color: "green" }}
+                        class="fas fa-chevron-right"
+                      ></i>{" "}
+                      Teachers
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-3  text-left">
+                  <h4>Location</h4>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115782.27313977969!2d67.00450174806444!3d24.92539083841797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f3c6be6963f%3A0xfc3be124dd280741!2sThe%20Horizon%20High!5e0!3m2!1sen!2s!4v1592215098967!5m2!1sen!2s"
+                    width="100%"
+                    height="200px"
+                    frameborder="0"
+                    style={{ border: "0px", boxShadow: "5px 5px 8px grey" }}
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0"
+                  ></iframe>
+                </div>
+                <div className="col-md-3  text-left">
+                  <h4>Join over Newsletter</h4>
+                  <p>enter your email address for subscribe</p>
+                  <form action="" method="post">
+                    <input
+                      style={{
+                        fontSize: "1em",
+                        padding: "10px",
+                        margin: "5px 0px",
+                        border: "1px solid",
+                        borderRadius: "5px",
+                        color: "green",
+                      }}
+                      placeholder="example@gmail.com"
+                      type="email"
+                      name="email"
+                    />
+                    <button className="btng">Subscribe</button>
+                  </form>
+                </div>
+              </div>
+            </ScrollAnimation>
           </div>
         </div>
       </div>

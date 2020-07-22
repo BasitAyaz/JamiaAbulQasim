@@ -3,6 +3,7 @@ import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import muslim from "../images/course1.png";
 import logo from "../images/logo.png";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class Course extends React.Component {
   constructor(props) {
@@ -51,6 +52,11 @@ class Course extends React.Component {
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="/donate">
+                    About <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="/feesubmission">
                     Fee Submission
                   </a>
@@ -60,6 +66,14 @@ class Course extends React.Component {
             </div>
           </nav>
         </div>
+        <div className="jumbotron" style={{ background:'linear-gradient(to bottom left, #66ccff 0%, #009999 100%)'}}>
+          <div className="container p-5 text-left text-white">
+          <ScrollAnimation animateIn="fadeInLeft">
+            <h1>Courses</h1>
+            <p>we deal with these courses</p>
+            </ScrollAnimation>
+          </div>
+        </div>
         {/* courses Body */}
           <div className="container p-5">
             <div className="row">
@@ -67,6 +81,7 @@ class Course extends React.Component {
                 <h1>Popular Courses</h1>
               </div>
               <div className="col-md-4 text-left p-3">
+              <ScrollAnimation animateIn="fadeInUp">
                 <div className="card border border-grey shadow rounded">
                   <img width="100%" src={muslim} className="img-fluid" />
                   <div className="p-4">
@@ -75,8 +90,10 @@ class Course extends React.Component {
                     <button className="btns">Register</button>
                   </div>
                 </div>
+                </ScrollAnimation>
               </div>
               <div className="col-md-4 text-left p-3">
+              <ScrollAnimation animateIn="fadeInUp">
                 <div className="card border border-grey shadow rounded">
                   <img width="100%" src={muslim} className="img-fluid" />
                   <div className="p-4">
@@ -85,8 +102,10 @@ class Course extends React.Component {
                     <button className="btns">Register</button>
                   </div>
                 </div>
+                </ScrollAnimation>
               </div>
               <div className="col-md-4 text-left p-3">
+              <ScrollAnimation animateIn="fadeInUp">
                 <div className="card  border border-grey shadow rounded">
                   <img width="100%" src={muslim} className="img-fluid" />
                   <div className="p-4">
@@ -95,8 +114,10 @@ class Course extends React.Component {
                     <button className="btns">Register</button>
                   </div>
                 </div>
+                </ScrollAnimation>
               </div>
               <div className="col-md-4 text-left p-3">
+              <ScrollAnimation animateIn="fadeInUp">
                 <div className="card  border border-grey shadow rounded">
                   <img width="100%" src={muslim} className="img-fluid" />
                   <div className="p-4">
@@ -105,12 +126,14 @@ class Course extends React.Component {
                     <button className="btns">Register</button>
                   </div>
                 </div>
+                </ScrollAnimation>
               </div>
             </div>
           </div>
         {/* footer */}
         <div className="jumbotron bg-light">
           <div className="container p-5">
+          <ScrollAnimation animateIn="fadeInUp">
             <div className="row p-3">
               <div className="col-md-3 text-left">
                 <img width='80px' src={logo} />
@@ -153,6 +176,7 @@ class Course extends React.Component {
                     ></i>{" "}
                     Courses
                   </li>
+                  
                   <li>
                     <i
                       style={{ color: "green" }}
@@ -203,6 +227,7 @@ class Course extends React.Component {
                 </form>
               </div>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </div>

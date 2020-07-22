@@ -79,6 +79,11 @@ class Fees extends React.Component {
                     Courses <span class="sr-only">(current)</span>
                   </a>
                 </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="/donate">
+                        About <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
                 <li
                   style={{ borderBottom: "1px solid #009999" }}
                   class="nav-item"

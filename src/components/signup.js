@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../images/logo.png";
+import ScrollAnimation from "react-animate-on-scroll";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -51,8 +52,8 @@ class Signup extends React.Component {
         password2,
         course,
         gender,
-      }
-      console.log(obj)
+      };
+      console.log(obj);
     }
   }
   render() {
@@ -81,7 +82,10 @@ class Signup extends React.Component {
                     Home <span class="sr-only">(current)</span>
                   </a>
                 </li>
-                <li style={{ borderBottom: '1px solid #009999'}} class="nav-item">
+                <li
+                  style={{ borderBottom: "1px solid #009999" }}
+                  class="nav-item"
+                >
                   <a class="nav-link" href="signup">
                     Registration <span class="sr-only">(current)</span>
                   </a>
@@ -97,12 +101,21 @@ class Signup extends React.Component {
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="/donate">
+                    About <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="/feesubmission">
                     Fee Submission
                   </a>
                 </li>
               </ul>
-              <div><button className='donatebtn'><i class="fas fa-donate"></i> Donate Us</button></div>
+              <div>
+                <button className="donatebtn">
+                  <i class="fas fa-donate"></i> Donate Us
+                </button>
+              </div>
             </div>
           </nav>{" "}
         </div>
@@ -137,7 +150,9 @@ class Signup extends React.Component {
                       id="FirstName"
                       className="form-control"
                       placeholder="Enter Your First Name"
-                      onChange={(e)=>this.setState({firstname:e.target.value})}
+                      onChange={(e) =>
+                        this.setState({ firstname: e.target.value })
+                      }
                     />
                   </div>
                   <div className="col-md-6 mb-3">
@@ -146,7 +161,9 @@ class Signup extends React.Component {
                       id="LastName"
                       className="form-control"
                       placeholder="Enter Your Last Name"
-                      onChange={(e)=>this.setState({lastname:e.target.value})}
+                      onChange={(e) =>
+                        this.setState({ lastname: e.target.value })
+                      }
                     />
                   </div>
                   <div className="col-md-8 mb-3">
@@ -155,7 +172,9 @@ class Signup extends React.Component {
                       id="FatherName"
                       className="form-control"
                       placeholder="Enter Your Father Name"
-                      onChange={(e)=>this.setState({FatherName:e.target.value})}
+                      onChange={(e) =>
+                        this.setState({ FatherName: e.target.value })
+                      }
                     />
                   </div>
                   <div className="col-md-6 mb-3">
@@ -164,7 +183,9 @@ class Signup extends React.Component {
                       id="contact"
                       className="form-control"
                       placeholder="03XXXXXXXXX"
-                      onChange={(e)=>this.setState({contact:e.target.value})}
+                      onChange={(e) =>
+                        this.setState({ contact: e.target.value })
+                      }
                     />
                   </div>
                   <div className="col-md-6 mb-3">
@@ -173,23 +194,27 @@ class Signup extends React.Component {
                       id="cnic"
                       className="form-control"
                       placeholder="XXXXX-XXXXXXX-X"
-                      onChange={(e)=>this.setState({cnic:e.target.value})}
+                      onChange={(e) => this.setState({ cnic: e.target.value })}
                     />
                   </div>
                 </div>
                 <hr className="mb-4" />
                 <div className="row">
                   <div className="col-md-6 mb-3">
-                    <select className="form-control" 
-                     onChange={(e)=>this.setState({country:e.target.value})}
+                    <select
+                      className="form-control"
+                      onChange={(e) =>
+                        this.setState({ country: e.target.value })
+                      }
                     >
                       <option>Select Country</option>
                       <option>Pakistan</option>
                     </select>
                   </div>
                   <div className="col-md-6 mb-3">
-                    <select className="form-control"
-                     onChange={(e)=>this.setState({city:e.target.value})}
+                    <select
+                      className="form-control"
+                      onChange={(e) => this.setState({ city: e.target.value })}
                     >
                       <option>Select City</option>
                       <option>Karachi</option>
@@ -207,7 +232,7 @@ class Signup extends React.Component {
                       id="email"
                       placeholder="example@gmail.com"
                       className="form-control"
-                      onChange={(e)=>this.setState({email:e.target.value})}
+                      onChange={(e) => this.setState({ email: e.target.value })}
                     />
                   </div>
                   <div className="col-md-5 mb-3">
@@ -217,7 +242,9 @@ class Signup extends React.Component {
                       className="form-control"
                       id="password1"
                       placeholder="Password"
-                      onChange={(e)=>this.setState({password1:e.target.value})}
+                      onChange={(e) =>
+                        this.setState({ password1: e.target.value })
+                      }
                     />
                   </div>
                   <div className="col-md-5 mb-3">
@@ -227,7 +254,9 @@ class Signup extends React.Component {
                       className="form-control"
                       id="password2"
                       placeholder="Password"
-                      onChange={(e)=>this.setState({password2:e.target.value})}
+                      onChange={(e) =>
+                        this.setState({ password2: e.target.value })
+                      }
                     />
                   </div>
                   <div className="col-md-12 mb-3"></div>
@@ -235,8 +264,11 @@ class Signup extends React.Component {
                 <hr className="mb-4" />
                 <div className="row">
                   <div className="col-md-6 mb-3">
-                    <select className="form-control"
-                     onChange={(e)=>this.setState({course:e.target.value})}
+                    <select
+                      className="form-control"
+                      onChange={(e) =>
+                        this.setState({ course: e.target.value })
+                      }
                     >
                       <option>Select Course</option>
                       <option>Darse Nizami</option>
@@ -347,6 +379,37 @@ class Signup extends React.Component {
             </div>
           </div>
         </div>
+        {/* donate form */}
+        {/* <div className="donateForm">
+          <div
+            className="jumbotron"
+            style={{
+              background:
+                "linear-gradient(to bottom left, #66ccff 0%, #009999 100%)",
+            }}
+          >
+            <div className="container p-5 text-left text-white">
+              <h1>
+                Donate Us <i class="fas fa-donate"></i>
+              </h1>
+            </div>
+          </div>
+            <button className="closebtn">
+              <i class="fas fa-times"></i>
+            </button>
+          <div style={{overflow:'scroll'}} className="container p-5">
+            <form>
+              <div className="row p-5">
+                <div className="col-md-6">
+                  <input placeholder="5214" />
+                </div>
+                <div className="col-md-6">
+                  <input placeholder="5214" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div> */}
       </div>
     );
   }
