@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../images/logo.png";
+import logow from "../images/Logo-white.png";
 
 class Admin extends React.Component {
   constructor(props) {
@@ -10,86 +12,90 @@ class Admin extends React.Component {
   render() {
     return (
       <div>
-        <header class="masthead mb-auto">
-          <div class="inner p-4">
-            <h3 class="masthead-brand">Jamia Abul Qasim</h3>
-          </div>
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">
-                  Home <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-3 bg-primary">
+              <div className="p-5">
+                <img src={logow} width="100px" />
+              </div>
+              <div className="p-5">
+                <ul>
+                  <li>Course</li>
+                  <li>Fees</li>
+                  <li>Result</li>
+                  <li>Logout</li>
+                  <li>Teachers</li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-md-9 bg-light p-5">
+              <div className="container-fluid">
+                <div className="row">
+                  <div className="col-md-4">
+                    <div
+                      style={{ borderLeft: "3px solid #009999",backgroundColor:'#fff',padding:'10px',margin:'10px' }}
+                      className="p-4 shadow"
+                    >
+                      <p style={{ fontSize: "1.5em" }}>Students 786</p>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div
+                      style={{ borderLeft: "3px solid #009999",backgroundColor:'#fff',padding:'10px',margin:'10px' }}
+                      className="p-4 shadow"
+                    >
+                      <p style={{ fontSize: "1.5em" }}>Teachers 786</p>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div
+                      style={{ borderLeft: "3px solid #009999",backgroundColor:'#fff',padding:'10px',margin:'10px' }}
+                      className="p-4 shadow"
+                    >
+                      <p style={{ fontSize: "1.5em" }}>Courses 78</p>
+                    </div>
+                  </div>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">
-                  Disabled
-                </a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button
-                class="btn btn-outline-success my-2 my-sm-0"
-                type="submit"
-              >
-                Search
-              </button>
-            </form>
+                <div className="row bg-white rounded shadow mt-5">
+                  <div className='col-md-12 p-4'>
+                    <h2>Enrollment Form</h2>
+                  </div>
+                  <div className="col-md-6 p-5">
+                    <label className="text-left" for="course">
+                      Enter Your Course If you want to open more then one course
+                      seprate your Value by (,) like this
+                    </label>
+                    <input
+                      id="course"
+                      className="form-control"
+                      placeholder="course 1, course 2, course 3"
+                    />
+                  </div>
+                  <div className="col-md-6 p-5">
+                    <label className="text-left" for="RollNo">
+                      Enter Your Starting roll Number where you want to start
+                      roll number from
+                    </label>
+                    <input
+                      id="RollNo"
+                      className="form-control"
+                      placeholder="Starting Roll Number"
+                    />
+                  </div>
+                  <div className='col-md-6 p-5'>
+                    Course Status<button style={{
+                    padding:10,
+                    outline:'none',
+                    fontSize:'2em',
+                    color:'#009999',
+                    border:'none',
+                    backgroundColor:'transparent'
+                  }}><i class="fas fa-toggle-on"></i></button></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </nav>
+        </div>
       </div>
     );
   }

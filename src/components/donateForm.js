@@ -113,11 +113,18 @@ class Donateform extends React.Component {
               </div>
               <div className="col-md-6 text-left  pt-3 pb-3">
                 <label for="Contact">Contact</label>
-                <input className="form-control" id="Contact" />
+                <input placeholder='03*********' className="form-control" id="Contact" />
               </div>
               <div className="col-md-6 text-left  pt-3 pb-3">
                 <label for="cnic">CNIC</label>
-                <input className="form-control" id="cnic" />
+                <input placeholder='42101********' className="form-control" id="cnic" />
+              </div>
+              <div className="col-md-12 text-left  pt-3 pb-3">
+                <label for="message">Message</label>
+                <textarea placeholder='Type Your message here' className="form-control" id="message"></textarea>
+              </div>
+              <div className='p-3'>
+              <button className='btns'>Donate</button>
               </div>
             </div>
           </form>
