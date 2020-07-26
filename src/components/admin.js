@@ -3,6 +3,7 @@ import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../images/logo.png";
 import logow from "../images/Logo-white.png";
+import * as firebase from 'firebase';
 
 class Admin extends React.Component {
   constructor(props) {
@@ -14,21 +15,31 @@ class Admin extends React.Component {
       <div>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-3 bg-primary">
-              <div className="p-5">
+            <div style={{
+              display:'flex',
+              flexDirection:'column',
+            }} className="col-md-3 bg-primary">
+              <div style={{
+                flex:'2'
+              }} className="p-5">
                 <img src={logow} width="100px" />
               </div>
-              <div className="p-5">
+              <div style={{
+                flex:'6',
+              }} className="p-5">
                 <ul>
-                  <li>Course</li>
-                  <li>Fees</li>
-                  <li>Result</li>
-                  <li>Logout</li>
-                  <li>Teachers</li>
+                  <li className='sideBarList'>Course</li>
+                  <li className='sideBarList'>Fees</li>
+                  <li className='sideBarList'>Result</li>
+                  <li className='sideBarList'>Logout</li>
+                  <li className='sideBarList'>Teachers</li>
                 </ul>
               </div>
+              <div style={{padding:'10px', color:'white'}}>
+                Made By <a target='blank' style={{color:'blue'}} href="https://basitahmed-31702.web.app/">Basit Ahmed</a> 
+              </div>
             </div>
-            <div className="col-md-9 bg-light p-5">
+            <div  style={{height:'100vh',overflow:'scroll'}} className="col-md-9 bg-light p-5">
               <div className="container-fluid">
                 <div className="row">
                   <div className="col-md-4">

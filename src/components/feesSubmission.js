@@ -12,6 +12,7 @@ import teacher2 from "../images/teacher2.jpg";
 import logo from "../images/logo.png";
 import logow from "../images/Logo-white.png";
 import QRCode from 'qrcode.react'
+import * as firebase from 'firebase';
 // var QRCode = require('qrcode.react');
 
 class Fees extends React.Component {
@@ -41,7 +42,8 @@ class Fees extends React.Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="container-fluid sticky-top bg-light">
+          <div className='container'>
           <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="/">
               <img src={logo} width="80px" />
@@ -96,6 +98,7 @@ class Fees extends React.Component {
               <div><button className='donatebtn'><i class="fas fa-donate"></i> Donate Us</button></div>
             </div>
           </nav>
+          </div>
         </div>
         {/* Fee search bar */}
         <div className="container mt-5">

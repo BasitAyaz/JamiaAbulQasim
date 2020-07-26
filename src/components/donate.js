@@ -11,6 +11,7 @@ import teacher1 from "../images/teacher1.jpg";
 import teacher2 from "../images/teacher2.jpg";
 import logo from "../images/logo.png";
 import ScrollAnimation from "react-animate-on-scroll";
+import * as firebase from 'firebase';
 
 class Donate extends React.Component {
   constructor(props) {
@@ -23,7 +24,8 @@ class Donate extends React.Component {
   render() {
     return (
       <div>
-        <div className="container">
+       <div className="container-fluid sticky-top bg-light">
+          <div className='container'>
           <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="/">
               <img src={logo} width="80px" />
@@ -82,6 +84,7 @@ class Donate extends React.Component {
               </div>
             </div>
           </nav>{" "}
+          </div>
         </div>
         <div
           className="jumbotron"

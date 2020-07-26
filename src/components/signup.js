@@ -8,6 +8,9 @@ class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // form Control
+      signupForm:false,
+      // details
       firstname: "",
       lastname: "",
       FatherName: "",
@@ -59,7 +62,8 @@ class Signup extends React.Component {
   render() {
     return (
       <div style={{ backgroundColor: "#f5f5f5" }}>
-        <div className="container">
+        <div className="container-fluid sticky-top bg-light">
+          <div className='container'>
           <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="/">
               <img src={logo} width="80px" />
@@ -118,6 +122,7 @@ class Signup extends React.Component {
               </div>
             </div>
           </nav>{" "}
+          </div>
         </div>
         <div className="container-fluid pb-5">
           <div
@@ -130,7 +135,9 @@ class Signup extends React.Component {
             <img style={{ margin: "20px" }} width="100px" src={logo} />
           </div>
         </div>
-        <div style={{ marginTop: "-150px" }} className="container">
+        
+        {/* form */}
+        {this.state.signupForm?<div style={{ marginTop: "-150px" }} className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-md-8 m-2">
               <form
@@ -293,7 +300,11 @@ class Signup extends React.Component {
               </form>
             </div>
           </div>
-        </div>
+        </div>:<div style={{ marginTop: "-150px" }} className="container bg-white p-5 mb-5 shadow rounded">
+          <p style={{fontSize:'3em',color:'lightgrey'}}>Form has been closed</p>
+          <p style={{fontSize:'2em',color:'lightgrey'}}>For More Course Follow the link</p>
+          <p style={{fontSize:'1.5em'}}><a href=''><i class="fab fa-facebook-square"></i> /Jamia Abul Qasim</a></p>
+        </div>}
         {/* footer */}
         <div className="jumbotron bg-light">
           <div className="container">

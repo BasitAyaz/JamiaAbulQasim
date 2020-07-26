@@ -13,7 +13,8 @@ class Course extends React.Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="container-fluid sticky-top bg-light">
+          <div className='container'>
           <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="/">
               <img src={logo} width="80px" />
@@ -65,6 +66,7 @@ class Course extends React.Component {
               <div><button className='donatebtn'><i class="fas fa-donate"></i> Donate Us</button></div>
             </div>
           </nav>
+          </div>
         </div>
         <div className="jumbotron" style={{ background:'linear-gradient(to bottom left, #66ccff 0%, #009999 100%)'}}>
           <div className="container p-5 text-left text-white">

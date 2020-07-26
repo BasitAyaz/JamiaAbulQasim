@@ -153,3 +153,34 @@ ul li{
   left: 10;
   top: 50;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+::-webkit-scrollbar-button{
+  background: transparent;
+  color: transparent;
+}
+.sideBarList{
+  padding: 10px;
+  color: white;
+  transition: .5s;
+}
+.sideBarList:hover{
+  background-color: rgba(0, 0, 0, .4);
+}

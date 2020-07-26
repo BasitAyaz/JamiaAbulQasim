@@ -9,7 +9,7 @@
     "animate.css": "^4.1.0",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.0",
-    "firebase": "^7.15.0",
+    "firebase": "^7.17.1",
     "qrcode.react": "^1.0.0",
     "react": "^16.13.1",
     "react-animate-on-scroll": "^2.1.5",

@@ -3,6 +3,7 @@ import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../images/logo.png";
 import ScrollAnimation from "react-animate-on-scroll";
+import * as firebase from 'firebase';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -12,8 +13,8 @@ class Contact extends React.Component {
   render() {
     return (
       <div>
-        <header class="masthead mb-auto">
-          <div className="container">
+        <div className="container-fluid sticky-top bg-light">
+          <div className='container'>
             <nav class="navbar navbar-expand-md navbar-light">
               <a class="navbar-brand" href="/">
                 <img src={logo} width="80px" />
@@ -72,8 +73,8 @@ class Contact extends React.Component {
                 </div>
               </div>
             </nav>{" "}
+            </div>
           </div>
-        </header>
         <div
           className="jumbotron"
           style={{
@@ -133,7 +134,10 @@ class Contact extends React.Component {
           </ScrollAnimation>
         </div>
         {/* contact details */}
-        <div className="jumbotron" style={{ backgroundColor: "green" }}>
+        <div className="jumbotron"   style={{
+            background:
+              "linear-gradient(to bottom left, #66ccff 0%, #009999 100%)",
+          }}>
           <div className="container p-5">
             <div className="row">
               <div className="col-md-4 text-white">

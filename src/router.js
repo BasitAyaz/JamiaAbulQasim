@@ -8,6 +8,7 @@ import Course from './components/cources'
 import Fees from './components/feesSubmission'
 import Donate from "./components/donate";
 import Donateform from './components/donateForm'
+import Login from './components/login'
 
 export default function AapRoute() {
   return (
@@ -16,6 +17,9 @@ export default function AapRoute() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/student">
+            <Login />
+          </Route>
           <Route path="/donateform">
             <Donateform />
           </Route>
