@@ -180,6 +180,7 @@ ul li{
   padding: 10px;
   color: white;
   transition: .5s;
+  cursor: pointer;
 }
 .sideBarList:hover{
   background-color: rgba(0, 0, 0, .4);
